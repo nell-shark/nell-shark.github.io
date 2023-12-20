@@ -1,5 +1,6 @@
-import Button from "react-bootstrap/Button";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function App() {
-  return <Button>Hello</Button>;
+  return <FontAwesomeIcon icon={faGithub} />;
 }
