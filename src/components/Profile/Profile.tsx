@@ -8,7 +8,7 @@ import { GITHUB_REPO_URL, MAIL_URL, TELEGRAM_URL } from "../../data/constants";
 
 export function Profile() {
   return (
-    <Container id="about" className="d-flex flex-column">
+    <Container id="profile" className="d-flex flex-column">
       <div className="d-flex justify-content-center gap-5 align-items-center flex-grow-1">
         <div className="w-50 text-end">
           <img
@@ -33,7 +33,7 @@ export function Profile() {
             sequence={[
               "A Developer",
               1000,
-              "A Software Engineer",
+              "A Scientist",
               1000,
               "A Coder",
               1000,

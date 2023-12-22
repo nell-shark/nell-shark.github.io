@@ -1,6 +1,7 @@
 import { Profile } from "./components/Profile";
 import { Navbar } from "./components/Navbar";
 import AnimatedCursor from "react-animated-cursor";
+import { About } from "./components/About";
 
 export function App() {
   return (
@@ -17,6 +18,7 @@ export function App() {
         outerSize={8}
       />
       <Profile />
+      <About />
     </>
   );
 }
