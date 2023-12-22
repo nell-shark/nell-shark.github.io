@@ -3,4 +3,9 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  cursor: none;
+}
+
+#about {
+  height: calc(100vh - 92px);
 }
