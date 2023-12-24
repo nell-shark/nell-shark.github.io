@@ -1,13 +1,13 @@
 import { Container } from "react-bootstrap";
-import Docker from "../../assets/docker.svg";
-import Gradle from "../../assets/gradle.svg";
-import JUnit from "../../assets/junit.svg";
-import Spring from "../../assets/spring.svg";
-import MySQL from "../../assets/mysql.svg";
-import Kubernetes from "../../assets/kubernetes.svg";
-import Git from "../../assets/git.svg";
-import Maven from "../../assets/maven.svg";
-import React from "../../assets/react.svg";
+import Docker from "@/assets/docker.svg";
+import Gradle from "@/assets/gradle.svg";
+import JUnit from "@/assets/junit.svg";
+import Spring from "@/assets/spring.svg";
+import MySQL from "@/assets/mysql.svg";
+import Kubernetes from "@/assets/kubernetes.svg";
+import Git from "@/assets/git.svg";
+import Maven from "@/assets/maven.svg";
+import React from "@/assets/react.svg";
 
 export function Experience() {
   return (

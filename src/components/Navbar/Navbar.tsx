@@ -15,6 +15,9 @@ export function Navbar() {
             <Nav.Link href="#experience" className="navbar-brand px-3 fs-3">
               Experience
             </Nav.Link>
+            <Nav.Link href="#projects" className="navbar-brand px-3 fs-3">
+              Projects
+            </Nav.Link>
             <Nav.Link href="#contact" className="navbar-brand px-3 fs-3">
               Contact
             </Nav.Link>

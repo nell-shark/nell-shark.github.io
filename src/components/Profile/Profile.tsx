@@ -1,10 +1,10 @@
 import { Container } from "react-bootstrap";
-import MyPhoto from "../../assets/me.jpg";
+import MyPhoto from "@/assets/me.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
 import { TypeAnimation } from "react-type-animation";
-import { GITHUB_REPO_URL, MAIL_URL, TELEGRAM_URL } from "../../data/constants";
+import { GITHUB_REPO_URL, MAIL_URL, TELEGRAM_URL } from "@/data/constants";
 
 export function Profile() {
   return (
