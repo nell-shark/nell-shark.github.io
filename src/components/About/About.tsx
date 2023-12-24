@@ -28,7 +28,7 @@ export function About() {
             data-aos="fade-up"
           >
             {steps.map((step) => (
-              <TimelineStep year={step.year} text={step.text} />
+              <TimelineStep text={step.text} year={step.year} />
             ))}
           </div>
         </div>

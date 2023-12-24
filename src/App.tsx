@@ -2,6 +2,7 @@ import { Profile } from "./components/Profile";
 import { Navbar } from "./components/Navbar";
 import AnimatedCursor from "react-animated-cursor";
 import { About } from "./components/About";
+import { Experience } from "./components/Experience";
 
 export function App() {
   return (
@@ -19,6 +20,7 @@ export function App() {
       />
       <Profile />
       <About />
+      <Experience />
     </>
   );
 }

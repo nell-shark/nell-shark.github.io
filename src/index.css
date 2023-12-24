@@ -52,6 +52,7 @@
   align-items: center;
   justify-content: center;
   background-color: #3b82f6;
+  transition: transform 0.3s ease-in-out;
 }
 
 .timeline-content .inner-circle:before {
@@ -63,4 +64,106 @@
   min-width: 3rem;
   border-radius: 6.25rem;
   opacity: 0.5;
+}
+
+.timeline-content .inner-circle:hover {
+  transform: scale(1.3);
+}
+
+.card-demo {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  z-index: 10;
+}
+
+.cards-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, minmax(100, 180px));
+  grid-template-rows: repeat(3, 150px);
+  grid-auto-rows: 190px;
+  grid-template-areas:
+    "sale1 sale1 product1 product2"
+    "product3 product4 sale2 sale2"
+    "sale3 sale3 product5 product6";
+}
+
+.sale-1 {
+  grid-area: sale1;
+}
+.sale-2 {
+  grid-area: sale2;
+}
+.sale-3 {
+  grid-area: sale3;
+}
+.sale-4 {
+  grid-area: sale4;
+}
+
+.product-1 {
+  grid-area: product1;
+}
+.product-2 {
+  grid-area: product2;
+}
+.product-3 {
+  grid-area: product3;
+}
+.product-4 {
+  grid-area: product4;
+}
+.product-5 {
+  grid-area: product5;
+}
+.product-6 {
+  grid-area: product6;
+}
+
+.card-demo img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 15px;
+}
+
+.blob {
+  display: block;
+  position: absolute;
+  opacity: 0.5;
+  width: 25vw;
+  aspect-ratio: 1/1;
+  animation: blob-move 5s infinite alternate ease-in-out ;
+  filter: blur(40px);
+  z-index: -1;
+  background: linear-gradient(
+    47deg,
+    rgba(255, 88, 139, 1) 21%,
+    rgb(0 164 173) 67%,
+    rgba(118, 74, 166, 1) 81%
+  );
+
+  box-shadow: inset 50px 50px 17px 0px #ff588b,
+    inset 100px 100px 17px 0px #66319f;
+
+}
+
+@keyframes blob-move {
+  0% {
+    translate: 0vw 0%;
+    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
+  }
+  50% {
+    translate: 25vw 50%;
+    border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
+    rotate: 41deg;
+    scale: 1.15;
+  }
+  100% {
+    translate: 50vw 0%;
+    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
+    rotate: -60deg;
+    scale: 1.05;
+  }
 }
