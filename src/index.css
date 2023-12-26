@@ -142,7 +142,7 @@
 }
 
 .nginx {
-  scale: 0.7;
+  scale: 0.6;
 }
 
 .card-skill img {
@@ -208,6 +208,7 @@
   position: relative;
   width: 50%;
   background-color: #f2a65e;
+  overflow: hidden;
 }
 
 .flicking-index {
@@ -239,11 +240,15 @@
 }
 
 .flicking-panel img {
-  padding-top: 10px;
-  border-left: 0;
-  border-right: 0;
   position: absolute;
+  bottom: -20%;
+  left: 20%;
   width: 100%;
   height: 100%;
   z-index: 2;
+  transition: 0.3s ease-in-out;
+}
+
+.flicking-panel img:hover {
+  bottom: -17%;
 }
