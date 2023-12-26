@@ -1,9 +1,9 @@
 import { Container } from "react-bootstrap";
+import { TypeAnimation } from "react-type-animation";
 import MyPhoto from "@/assets/me.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
-import { TypeAnimation } from "react-type-animation";
 import { GITHUB_REPO_URL, MAIL_URL, TELEGRAM_URL } from "@/data/constants";
 
 export function Profile() {
@@ -17,35 +17,25 @@ export function Profile() {
           />
         </div>
         <div className="w-50">
-          <h1
-            style={{
-              fontSize: "4em",
-              fontWeight: "400",
-              display: "inline-block",
-            }}
-          >
-            Hi
-            <br />
-            I'm Vlad
-          </h1>
-          <br />
           <TypeAnimation
             sequence={[
-              "A Developer",
+              "Hi\nI'm Vlad\nA Developer",
               1000,
-              "A Scientist",
+              "Hi\nI'm Vlad\nA Scientist",
               1000,
-              "A Coder",
+              "Hi\nI'm Vlad\nA Coder",
               1000,
-              "A Dreamer",
+              "Hi\nI'm Vlad\nA Dreamer",
               1000,
             ]}
+            preRenderFirstString={true}
             wrapper="span"
             speed={50}
             style={{
-              fontSize: "4em",
+              fontSize: "4vw",
               fontWeight: "400",
               display: "inline-block",
+              whiteSpace: 'pre-line'
             }}
             repeat={Infinity}
           />

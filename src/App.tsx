@@ -1,9 +1,10 @@
 import { Profile } from "@/components/Profile";
 import { Navbar } from "@/components/Navbar";
 import { About } from "@/components/About";
-import { Experience } from "@/components/Experience";
-import { Projects } from "@/components/Projects";
-import AnimatedCursor from "react-animated-cursor";
+import { Skills } from "@/components/Skills";
+import { Works } from "@/components/Works";
+import { Contact } from "@/components/Contact";
+import { CustomAnimatedCursor } from "@/components/CustomAnimatedCursor";
 
 
 export function App() {
@@ -12,18 +13,10 @@ export function App() {
       <Navbar />
       <Profile />
       <About />
-      <Experience />
-      <Projects />
-      <AnimatedCursor
-        color="156, 39, 176"
-        innerStyle={{
-          backgroundColor: "#000",
-        }}
-        outerStyle={{
-          mixBlendMode: "exclusion",
-        }}
-        outerSize={8}
-      />
+      <Skills />
+      <Works />
+      <Contact />
+      <CustomAnimatedCursor />
     </>
   );
 }

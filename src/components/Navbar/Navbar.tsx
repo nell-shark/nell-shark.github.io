@@ -12,11 +12,11 @@ export function Navbar() {
             <Nav.Link href="#about" className="navbar-brand px-3 fs-3">
               About
             </Nav.Link>
-            <Nav.Link href="#experience" className="navbar-brand px-3 fs-3">
-              Experience
+            <Nav.Link href="#skills" className="navbar-brand px-3 fs-3">
+              Skills
             </Nav.Link>
-            <Nav.Link href="#projects" className="navbar-brand px-3 fs-3">
-              Projects
+            <Nav.Link href="#works" className="navbar-brand px-3 fs-3">
+              Works
             </Nav.Link>
             <Nav.Link href="#contact" className="navbar-brand px-3 fs-3">
               Contact

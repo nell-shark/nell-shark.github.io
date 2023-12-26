@@ -70,11 +70,19 @@
   transform: scale(1.3);
 }
 
-.card-demo {
+.card-skill {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 1rem;
   padding: 1.5rem;
   z-index: 10;
+}
+
+.card-skill img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-skill img:hover {
+  transform: scale(1.1);
 }
 
 .cards-grid {
@@ -121,7 +129,23 @@
   grid-area: product6;
 }
 
-.card-demo img {
+.typescript {
+  scale: 1.6;
+}
+
+.spring {
+  scale: 1.6;
+}
+
+.docker {
+  scale: 1.7;
+}
+
+.nginx {
+  scale: 0.7;
+}
+
+.card-skill img {
   width: 100%;
   height: 100%;
   object-fit: fill;
@@ -169,4 +193,57 @@
     translate: 0vw 0%;
     border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
   }
+}
+
+.flicking-panel {
+  align-items: flex-end;
+  border-radius: 5px;
+  box-sizing: border-box;
+  display: flex;
+  height: 70vh;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 30px 20px;
+  position: relative;
+  width: 50%;
+  background-color: #f2a65e;
+}
+
+.flicking-index {
+  min-width: 60px;
+  position: relative;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.flicking-index:before {
+  border-bottom: 2px solid #fff;
+  bottom: 0.5rem;
+  content: "";
+  left: 10%;
+  position: absolute;
+  width: 80%;
+}
+
+.flicking-index:after {
+  bottom: -1.2rem;
+  content: "LINK";
+  font-size: 1rem;
+  font-weight: 700;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.flicking-panel img {
+  padding-top: 10px;
+  border-left: 0;
+  border-right: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }

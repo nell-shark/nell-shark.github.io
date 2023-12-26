@@ -27,8 +27,8 @@ export function About() {
             className="d-flex justify-content-center flex-wrap aos-init aos-animate"
             data-aos="fade-up"
           >
-            {steps.map((step) => (
-              <TimelineStep text={step.text} year={step.year} />
+            {steps.map((step, index) => (
+              <TimelineStep text={step.text} year={step.year} key={index} />
             ))}
           </div>
         </div>
