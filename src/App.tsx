@@ -1,11 +1,10 @@
 import { Profile } from "@/components/Profile";
 import { Navbar } from "@/components/Navbar";
 import { About } from "@/components/About";
-import { Skills } from "@/components/Skills";
-import { Works } from "@/components/Works";
+import { SkillList } from "@/components/SkillList";
 import { Contact } from "@/components/Contact";
 import { CustomAnimatedCursor } from "@/components/CustomAnimatedCursor";
-
+import { WorkList } from "@/components/WorkList";
 
 export function App() {
   return (
@@ -13,9 +12,9 @@ export function App() {
       <Navbar />
       <Profile />
       <About />
-      <Skills />
-      <Works />
-      <Contact />
+      <SkillList />
+      <WorkList />
+      {/* <Contact /> */}
       <CustomAnimatedCursor />
     </>
   );

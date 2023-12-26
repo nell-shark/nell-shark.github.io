@@ -5,10 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
 import { GITHUB_REPO_URL, MAIL_URL, TELEGRAM_URL } from "@/data/constants";
+import "./Profile.css";
 
 export function Profile() {
   return (
-    <Container id="profile" className="d-flex flex-column">
+    <Container id="profile" className="d-flex flex-column mb-5">
       <div className="d-flex justify-content-center gap-5 align-items-center flex-grow-1">
         <div className="w-50 text-end">
           <img
@@ -35,7 +36,7 @@ export function Profile() {
               fontSize: "4vw",
               fontWeight: "400",
               display: "inline-block",
-              whiteSpace: 'pre-line'
+              whiteSpace: "pre-line",
             }}
             repeat={Infinity}
           />

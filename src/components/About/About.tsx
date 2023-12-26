@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import { TimelineStep, TimelineStepProps } from "./TimelineStep";
+import "./About.css";
 
 const steps: TimelineStepProps[] = [
   { year: 1998, text: "Birth" },
@@ -13,7 +14,7 @@ export function About() {
   return (
     <Container
       id="about"
-      className="vh-100 d-flex flex-column justify-content-center align-items-center"
+      className="vh-100 d-flex flex-column justify-content-center align-items-center mb-5"
     >
       <div className="row text-center justify-content-center mb-5">
         <div className="w-100">

@@ -1,35 +1,19 @@
-import { useEffect, useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
+import "./CustomAnimatedCursor.css";
 
 export function CustomAnimatedCursor() {
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsVisible(window.innerWidth > 700);
-    };
-    window.addEventListener("resize", handleResize);
-    handleResize(); 
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
-    <>
-      {isVisible && (
-        <AnimatedCursor
-          color="156, 39, 176"
-          innerStyle={{
-            backgroundColor: "#000",
-          }}
-          outerStyle={{
-            mixBlendMode: "exclusion",
-          }}
-          outerSize={8}
-        />
-      )}
-    </>
+    <div id="animated-cursor">
+      <AnimatedCursor
+        color="156, 39, 176"
+        innerStyle={{
+          backgroundColor: "#000",
+        }}
+        outerStyle={{
+          mixBlendMode: "exclusion",
+        }}
+        outerSize={8}
+      />
+    </div>
   );
 }
