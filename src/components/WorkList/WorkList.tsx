@@ -28,7 +28,7 @@ const panels: WorkPanel[] = [
 
 export function WorkList() {
   return (
-    <div id="works" className="pt-2">
+    <div id="works" className="py-2">
       <div className="text-center justify-content-center my-5">
         <div className="w-100">
           <h2 className="font-weight-bold">My Works</h2>

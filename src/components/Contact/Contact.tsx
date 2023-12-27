@@ -1,53 +1,36 @@
-import { Container } from "react-bootstrap";
+import { faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
+import { faAt } from "@fortawesome/free-solid-svg-icons";
 import "./Contact.css";
 import { ContactCard, ContactCardProps } from "./ContactCard";
+import { GITHUB_URL, EMAIL_URL, TELEGRAM_URL } from "@/data/constants";
+import { Container } from "react-bootstrap";
 
 const contactCards: ContactCardProps[] = [
-  {
-    img: "https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-1.jpg",
-    title: "Card One",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    zIndex: 1,
-  },
-  {
-    img: "https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg",
-    title: "Card Two",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    zIndex: 2,
-  },
-  {
-    img: "https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-3.jpg",
-    title: "Card Three",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    zIndex: 3,
-  },
-  {
-    img: "https://codyhouse.co/demo-tutorials/stacking-cards/assets/img/img-2.jpg",
-    title: "Card Four",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    zIndex: 4,
-  },
+  { tag: "github", href: GITHUB_URL, icon: faGithub },
+  { tag: "telegram", href: TELEGRAM_URL, icon: faTelegram },
+  { tag: "email", href: EMAIL_URL, icon: faAt },
 ];
 
 export function Contact() {
   return (
     <Container
       id="contact"
+      className="vh-100 d-flex flex-column justify-content-center align-items-center"
     >
       <div className="row text-center justify-content-center mb-5">
         <div className="w-100">
           <h2 className="font-weight-bold">Contact</h2>
-          <p className="text-muted">Get in Touch</p>
+          <p className="text-muted">Get in touch</p>
         </div>
       </div>
-      <div className="text-center">
-        <main>
-          <ul id="my-cards">
+      <div className="row">
+        <div className="col">
+          <ul className="d-flex list-inline">
             {contactCards.map((card, index) => (
               <ContactCard {...card} key={index} />
             ))}
           </ul>
-        </main>
+        </div>
       </div>
     </Container>
   );

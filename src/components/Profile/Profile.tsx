@@ -1,10 +1,10 @@
 import { Container } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
-import MyPhoto from "@/assets/me.jpg";
+import MyPhoto from "@/assets/me.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
-import { GITHUB_REPO_URL, MAIL_URL, TELEGRAM_URL } from "@/data/constants";
+import { GITHUB_URL, EMAIL_URL, TELEGRAM_URL } from "@/data/constants";
 import "./Profile.css";
 
 export function Profile() {
@@ -43,13 +43,13 @@ export function Profile() {
         </div>
       </div>
       <div className="text-center pb-3">
-        <a href={GITHUB_REPO_URL}>
+        <a href={GITHUB_URL}>
           <FontAwesomeIcon icon={faGithub} size="2x" color="black" />
         </a>
         <a href={TELEGRAM_URL} className="px-4">
           <FontAwesomeIcon icon={faTelegram} size="2x" color="black" />
         </a>
-        <a href={MAIL_URL}>
+        <a href={EMAIL_URL}>
           <FontAwesomeIcon icon={faAt} size="2x" color="black" />
         </a>
       </div>

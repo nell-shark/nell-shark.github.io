@@ -1,25 +1,25 @@
+import { IconPrefix, IconName, IconProp } from "@fortawesome/fontawesome-svg-core";
+import {
+  FontAwesomeIcon,
+  FontAwesomeIconProps,
+} from "@fortawesome/react-fontawesome";
+
 export interface ContactCardProps {
-  img: string;
-  title: string;
-  text: string;
-  zIndex: number;
+  tag: "telegram" | "github" | "email";
+  href: string;
+  icon:  IconProp;
 }
 
-export function ContactCard({ img, title, text, zIndex }: ContactCardProps) {
+export function ContactCard({ tag, icon, href }: ContactCardProps) {
   return (
-    <li className="my-card" style={{ zIndex: zIndex }}>
-      <div className="my-card-content">
-        <div>
-          <h2>{title}</h2>
-          <p>{text}</p>
-          <a href="" className="btn btn-outline-success btn-lg">
-            Read more
-          </a>
-        </div>
-        <figure>
-          <img src={img} alt="" />
-        </figure>
-      </div>
+    <li>
+      <a className={`contact-card ${tag}`} href={href}>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <FontAwesomeIcon icon={icon} aria-hidden={true} />
+      </a>
     </li>
   );
 }

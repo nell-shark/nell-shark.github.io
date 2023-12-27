@@ -14,7 +14,8 @@ export function App() {
       <About />
       <SkillList />
       <WorkList />
-      {/* <Contact /> */}
+      <Contact />
+      
       <CustomAnimatedCursor />
     </>
   );

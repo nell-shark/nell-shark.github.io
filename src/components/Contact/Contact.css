@@ -1,114 +1,123 @@
 :root {
-  --card-height: 40vw;
-  --card-margin: 4vw;
-  --card-top-offset: 1em;
-  --numcards: 4;
-  --outline-width: 0px;
+  --github-color: #6e5494;
+  --telegram-color: #1da1f2;
+  --email-color: #dd4b39;
 }
 
-#cards {
-  padding-bottom: calc(var(--numcards) * var(--card-top-offset));
-  margin-bottom: var(--card-margin);
+#contact ul {
+  flex-direction: row;
 }
 
-.my-card {
-  position: sticky;
-  top: 0;
-  padding-top: calc(var(--index) * var(--card-top-offset));
-}
-
-@supports (animation-timeline: works) {
-  @scroll-timeline cards-element-scrolls-in-body {
-    source: selector(body);
-    scroll-offsets: selector(#cards) start 1, selector(#cards) start 0;
-    start: selector(#cards) start 1;
-    end: selector(#cards) start 0;
-    time-range: 4s;
+@media (max-width: 768px) {
+  #contact ul {
+    flex-direction: column;
   }
 
-  .my-card {
-    --index0: calc(var(--index) - 1);
-    --reverse-index: calc(var(--numcards) - var(--index0));
-    --reverse-index0: calc(var(--reverse-index) - 1);
-  }
-
-  .my-card-content {
-    transform-origin: 50% 0%;
-    will-change: transform;
-
-    --duration: calc(var(--reverse-index0) * 1s);
-    --delay: calc(var(--index0) * 1s);
-
-    animation: var(--duration) linear scale var(--delay) forwards;
-    animation-timeline: cards-element-scrolls-in-body;
-  }
-
-  @keyframes scale {
-    to {
-      transform: scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
-    }
+  #contact ul li {
+    margin-bottom: 30px;
   }
 }
 
-body {
+.contact-card {
+  display: block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 40px;
   text-align: center;
-  font-size: calc(1em + 0.5vw);
+  text-decoration: none;
+  color: #404040;
+  margin: 0 30px;
+  transition: 0.5s;
 }
 
-
-#my-cards {
-  list-style: none;
-  outline: calc(var(--outline-width) * 10) solid blue;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(var(--numcards), var(--card-height));
-  gap: var(--card-margin);
+.contact-card span {
+  position: absolute;
+  transition: transform 0.5s;
 }
 
-.my-card {
-  outline: var(--outline-width) solid hotpink;
-}
-
-.my-card-content {
-  box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.1), 0 1em 2em rgba(0, 0, 0, 0.1);
-  background: rgb(255, 255, 255);
-  color: rgb(10, 5, 7);
-  border-radius: 1em;
-  overflow: hidden;
-
-  display: grid;
-  grid-template-areas: "text img";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-
-  align-items: stretch;
-  outline: var(--outline-width) solid lime;
-}
-
-.my-card-content > div {
-  grid-area: text;
-  width: 80%;
-  place-self: center;
-  text-align: left;
-
-  display: grid;
-  gap: 1em;
-  place-items: start;
-}
-
-.my-card-content > figure {
-  grid-area: img;
-  overflow: hidden;
-}
-
-.my-card-content > figure > img {
+.contact-card span:nth-child(1),
+.contact-card span:nth-child(3) {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 3px;
+  background: #404040;
 }
 
-.my-card-content h2 {
-  font-weight: 300;
-  font-size: 2.5em;
+.contact-card span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+
+.contact-card:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.contact-card span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+
+.contact-card:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.contact-card span:nth-child(2),
+.contact-card span:nth-child(4) {
+  width: 3px;
+  height: 100%;
+  background: #404040;
+}
+
+.contact-card span:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+
+.contact-card:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+.contact-card span:nth-child(4) {
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  transform-origin: top;
+}
+
+.contact-card:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.telegram:hover {
+  color: var(--telegram-color);
+}
+.telegram:hover span {
+  background: var(--telegram-color);
+}
+
+.github:hover {
+  color: var(--github-color);
+}
+.github:hover span {
+  background: var(--github-color);
+}
+
+.email:hover {
+  color: var(--email-color);
+}
+.email:hover span {
+  background: var(--email-color);
 }
