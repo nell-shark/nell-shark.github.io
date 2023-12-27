@@ -1,14 +1,15 @@
 import {
   FIPS_URL,
   MOCK_API_HUB_URL,
-  SPRING_BOOT_REACT_TRACK_PLAYER_URL,
+  SPRING_BOOT_REACT_TRACK_PLAYER_URL as TRACK_PLAYER_URL,
 } from "@/data/constants";
 import "@egjs/flicking/dist/flicking.css";
 import Flicking from "@egjs/react-flicking";
-import Certificate from "@/assets/certificate.svg";
-import MockApiHub from "@/assets/mock-api-hub.svg";
-import SpringBootReactTrackPlayer from "@/assets/spring-boot-react-track-player.svg";
+import Certificate from "@/assets/svg/certificate.svg";
+import MockApiHub from "@/assets/svg/mock-api-hub.svg";
+import TrackPlayer from "@/assets/svg/track-player.svg";
 import "./WorkList.css";
+import { useTranslation } from "react-i18next";
 
 interface WorkPanel {
   link: string;
@@ -19,20 +20,18 @@ interface WorkPanel {
 const panels: WorkPanel[] = [
   { color: "#f14668", image: Certificate, link: FIPS_URL },
   { color: "#3e8ed0", image: MockApiHub, link: MOCK_API_HUB_URL },
-  {
-    color: "#48c78e",
-    image: SpringBootReactTrackPlayer,
-    link: SPRING_BOOT_REACT_TRACK_PLAYER_URL,
-  },
+  { color: "#48c78e", image: TrackPlayer, link: TRACK_PLAYER_URL },
 ];
 
 export function WorkList() {
+  const { t } = useTranslation();
+
   return (
     <div id="works" className="py-2">
       <div className="text-center justify-content-center my-5">
         <div className="w-100">
-          <h2 className="font-weight-bold">My Works</h2>
-          <p className="text-muted">The projects that I developed</p>
+          <h2 className="font-weight-bold">{t("works")}</h2>
+          <p className="text-muted">{t("works-text")}</p>
         </div>
       </div>
       <div>

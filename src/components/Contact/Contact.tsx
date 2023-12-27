@@ -4,6 +4,7 @@ import "./Contact.css";
 import { ContactCard, ContactCardProps } from "./ContactCard";
 import { GITHUB_URL, EMAIL_URL, TELEGRAM_URL } from "@/data/constants";
 import { Container } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
 
 const contactCards: ContactCardProps[] = [
   { tag: "github", href: GITHUB_URL, icon: faGithub },
@@ -12,6 +13,8 @@ const contactCards: ContactCardProps[] = [
 ];
 
 export function Contact() {
+  const { t } = useTranslation();
+
   return (
     <Container
       id="contact"
@@ -19,8 +22,8 @@ export function Contact() {
     >
       <div className="row text-center justify-content-center mb-5">
         <div className="w-100">
-          <h2 className="font-weight-bold">Contact</h2>
-          <p className="text-muted">Get in touch</p>
+          <h2 className="font-weight-bold">{t("contact")}</h2>
+          <p className="text-muted">{t("contact-text")}</p>
         </div>
       </div>
       <div className="row">

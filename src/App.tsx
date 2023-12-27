@@ -5,6 +5,7 @@ import { SkillList } from "@/components/SkillList";
 import { Contact } from "@/components/Contact";
 import { CustomAnimatedCursor } from "@/components/CustomAnimatedCursor";
 import { WorkList } from "@/components/WorkList";
+  
 
 export function App() {
   return (
@@ -15,7 +16,7 @@ export function App() {
       <SkillList />
       <WorkList />
       <Contact />
-      
+
       <CustomAnimatedCursor />
     </>
   );

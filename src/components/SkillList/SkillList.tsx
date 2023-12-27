@@ -1,16 +1,19 @@
 import { Container } from "react-bootstrap";
-import Docker from "@/assets/docker.svg";
-import Gradle from "@/assets/gradle.svg";
-import JUnit from "@/assets/junit.svg";
-import Spring from "@/assets/spring.svg";
-import MySQL from "@/assets/mysql.svg";
-import Nginx from "@/assets/nginx.svg";
-import Git from "@/assets/git.svg";
-import Maven from "@/assets/maven.svg";
-import React from "@/assets/typescript.svg";
+import Docker from "@/assets/svg/docker.svg";
+import Gradle from "@/assets/svg/gradle.svg";
+import JUnit from "@/assets/svg/junit.svg";
+import Spring from "@/assets/svg/spring.svg";
+import MySQL from "@/assets/svg/mysql.svg";
+import Nginx from "@/assets/svg/nginx.svg";
+import Git from "@/assets/svg/git.svg";
+import Maven from "@/assets/svg/maven.svg";
+import React from "@/assets/svg/typescript.svg";
 import "./SkillList.css";
+import { useTranslation } from "react-i18next";
 
 export function SkillList() {
+  const { t } = useTranslation();
+
   return (
     <Container
       id="skills"
@@ -18,8 +21,8 @@ export function SkillList() {
     >
       <div className="text-center justify-content-center mb-5">
         <div className="w-100">
-          <h2 className="font-weight-bold">Skills</h2>
-          <p className="text-muted">A set of technologies that I use</p>
+          <h2 className="font-weight-bold">{t("skills")}</h2>
+          <p className="text-muted">{t("skills-text")}</p>
         </div>
       </div>
       <div className="skill-cards-grid overflow-hidden">

@@ -1,13 +1,16 @@
 import { Container } from "react-bootstrap";
 import { TypeAnimation } from "react-type-animation";
-import MyPhoto from "@/assets/me.svg";
+import MyPhoto from "@/assets/svg/me.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
 import { faAt } from "@fortawesome/free-solid-svg-icons";
 import { GITHUB_URL, EMAIL_URL, TELEGRAM_URL } from "@/data/constants";
 import "./Profile.css";
+import { useTranslation } from "react-i18next";
 
 export function Profile() {
+  const { t } = useTranslation();
+  
   return (
     <Container id="profile" className="d-flex flex-column mb-5">
       <div className="d-flex justify-content-center gap-5 align-items-center flex-grow-1">
@@ -20,13 +23,13 @@ export function Profile() {
         <div className="w-50">
           <TypeAnimation
             sequence={[
-              "Hi\nI'm Vlad\nA Developer",
+              t("greeting-1"),
               1000,
-              "Hi\nI'm Vlad\nA Scientist",
+              t("greeting-2"),
               1000,
-              "Hi\nI'm Vlad\nA Coder",
+              t("greeting-3"),
               1000,
-              "Hi\nI'm Vlad\nA Dreamer",
+              t("greeting-4"),
               1000,
             ]}
             preRenderFirstString={true}

@@ -1,16 +1,19 @@
 import { Container } from "react-bootstrap";
 import { TimelineStep, TimelineStepProps } from "./TimelineStep";
 import "./About.css";
-
-const steps: TimelineStepProps[] = [
-  { year: 1998, text: "Birth" },
-  { year: 2005, text: "School" },
-  { year: 2014, text: "College" },
-  { year: 2017, text: "University" },
-  { year: 2022, text: "Science" },
-];
+import { useTranslation } from "react-i18next";
 
 export function About() {
+  const { t } = useTranslation();
+
+  const steps: TimelineStepProps[] = [
+    { year: 1998, text: t("birth") },
+    { year: 2005, text: t("school") },
+    { year: 2014, text: t("college") },
+    { year: 2017, text: t("university") },
+    { year: 2022, text: t("science") },
+  ];
+
   return (
     <Container
       id="about"
@@ -18,8 +21,8 @@ export function About() {
     >
       <div className="row text-center justify-content-center mb-5">
         <div className="w-100">
-          <h2 className="font-weight-bold">About Myself</h2>
-          <p className="text-muted">My Life History in Timeline</p>
+          <h2 className="font-weight-bold">{t("about")}</h2>
+          <p className="text-muted">{t("about-text")}</p>
         </div>
       </div>
       <div className="row">
