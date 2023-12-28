@@ -2,10 +2,11 @@
   "name": "portfolio",
   "version": "1.0",
   "homepage": "https://nell-shark.github.io/portfolio",
+  "private": false,
   "scripts": {
     "start": "craco start",
     "build": "svgo -f ./src/assets/svg && craco build",
-    "test": "craco test", 
+    "test": "craco test",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
