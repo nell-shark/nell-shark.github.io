@@ -72,29 +72,6 @@
     inset 100px 100px 17px 0px #66319f;
 }
 
-@keyframes blob-move {
-  0% {
-    translate: 0vw 0vh;
-    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
-  }
-  33% {
-    translate: 25vw 35vh;
-    border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
-    rotate: 41deg;
-    scale: 1.15;
-  }
-  66% {
-    translate: 50vw 0vh;
-    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
-    rotate: -60deg;
-    scale: 1.05;
-  }
-  100% {
-    translate: 0vw 0vh;
-    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
-  }
-}
-
 .block-1 {
   grid-area: block1;
 }
@@ -125,6 +102,29 @@
 }
 .cube-6 {
   grid-area: cube6;
+}
+
+@keyframes blob-move {
+  0% {
+    translate: 0vw 0vh;
+    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
+  }
+  33% {
+    translate: 25vw 35vh;
+    border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
+    rotate: 41deg;
+    scale: 1.15;
+  }
+  66% {
+    translate: 50vw 0vh;
+    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
+    rotate: -60deg;
+    scale: 1.05;
+  }
+  100% {
+    translate: 0vw 0vh;
+    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
+  }
 }
 
 @media (max-width: 768px) {

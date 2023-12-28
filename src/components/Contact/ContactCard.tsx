@@ -1,11 +1,7 @@
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { ContactInfo } from "@/typings/contact";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export interface ContactCardProps {
-  tag: "telegram" | "github" | "email";
-  href: string;
-  icon: IconProp;
-}
+export interface ContactCardProps extends ContactInfo {}
 
 export function ContactCard({ tag, icon, href }: ContactCardProps) {
   return (

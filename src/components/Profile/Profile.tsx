@@ -1,23 +1,28 @@
-import { Container } from "react-bootstrap";
-import { TypeAnimation } from "react-type-animation";
 import MyPhoto from "@/assets/svg/me.svg";
+import { CONTACT_INFO_LIST } from "@/data/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faTelegram } from "@fortawesome/free-brands-svg-icons";
-import { faAt } from "@fortawesome/free-solid-svg-icons";
-import { GITHUB_URL, EMAIL_URL, TELEGRAM_URL } from "@/data/constants";
-import "./Profile.css";
+import { useEffect, useState } from "react";
+import { Container } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import { TypeAnimation } from "react-type-animation";
+import "./Profile.css";
 
 export function Profile() {
   const { t } = useTranslation();
-  
+  const [forceUpdate, setForceUpdate] = useState(0);
+
+  useEffect(() => {
+    setForceUpdate((prev) => ++prev);
+  }, [localStorage.getItem("language")]);
+
   return (
     <Container id="profile" className="d-flex flex-column mb-5">
       <div className="d-flex justify-content-center gap-5 align-items-center flex-grow-1">
-        <div className="w-50 text-end">
+        <div className="w-50">
           <img
             src={MyPhoto}
             className="rounded-circle w-50 rotating-border rotating-border"
+            alt="My Photo"
           />
         </div>
         <div className="w-50">
@@ -42,19 +47,16 @@ export function Profile() {
               whiteSpace: "pre-line",
             }}
             repeat={Infinity}
+            key={forceUpdate}
           />
         </div>
       </div>
       <div className="text-center pb-3">
-        <a href={GITHUB_URL}>
-          <FontAwesomeIcon icon={faGithub} size="2x" color="black" />
-        </a>
-        <a href={TELEGRAM_URL} className="px-4">
-          <FontAwesomeIcon icon={faTelegram} size="2x" color="black" />
-        </a>
-        <a href={EMAIL_URL}>
-          <FontAwesomeIcon icon={faAt} size="2x" color="black" />
-        </a>
+        {CONTACT_INFO_LIST.map((contact, index) => (
+          <a href={contact.href} className="px-4" key={index}>
+            <FontAwesomeIcon icon={contact.icon} size="2x" color="black" />
+          </a>
+        ))}
       </div>
     </Container>
   );

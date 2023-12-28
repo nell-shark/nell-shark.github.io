@@ -8,16 +8,6 @@
   flex-direction: row;
 }
 
-@media (max-width: 768px) {
-  #contact ul {
-    flex-direction: column;
-  }
-
-  #contact ul li {
-    margin-bottom: 30px;
-  }
-}
-
 .contact-card {
   display: block;
   position: relative;
@@ -120,4 +110,14 @@
 }
 .email:hover span {
   background: var(--email-color);
+}
+
+@media (max-width: 768px) {
+  #contact ul {
+    flex-direction: column;
+  }
+
+  #contact ul li {
+    margin-bottom: 30px;
+  }
 }

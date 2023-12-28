@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
-import { TimelineStep, TimelineStepProps } from "./TimelineStep";
-import "./About.css";
 import { useTranslation } from "react-i18next";
+import "./About.css";
+import { TimelineStep, TimelineStepProps } from "./TimelineStep";
 
 export function About() {
   const { t } = useTranslation();
@@ -19,23 +19,14 @@ export function About() {
       id="about"
       className="vh-100 d-flex flex-column justify-content-center align-items-center mb-5"
     >
-      <div className="row text-center justify-content-center mb-5">
-        <div className="w-100">
-          <h2 className="font-weight-bold">{t("about")}</h2>
-          <p className="text-muted">{t("about-text")}</p>
-        </div>
+      <div className="text-center justify-content-center mb-5">
+        <h2 className="font-weight-bold">{t("about")}</h2>
+        <p className="text-muted">{t("about-text")}</p>
       </div>
-      <div className="row">
-        <div className="col">
-          <div
-            className="d-flex justify-content-center flex-wrap aos-init aos-animate"
-            data-aos="fade-up"
-          >
-            {steps.map((step, index) => (
-              <TimelineStep text={step.text} year={step.year} key={index} />
-            ))}
-          </div>
-        </div>
+      <div className="d-flex justify-content-center flex-wrap">
+        {steps.map((step, index) => (
+          <TimelineStep {...step} key={index} />
+        ))}
       </div>
     </Container>
   );

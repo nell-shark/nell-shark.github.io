@@ -29,10 +29,8 @@ export function WorkList() {
   return (
     <div id="works" className="py-2">
       <div className="text-center justify-content-center my-5">
-        <div className="w-100">
-          <h2 className="font-weight-bold">{t("works")}</h2>
-          <p className="text-muted">{t("works-text")}</p>
-        </div>
+        <h2 className="font-weight-bold">{t("works")}</h2>
+        <p className="text-muted">{t("works-text")}</p>
       </div>
       <div>
         <Flicking renderOnlyVisible={true} circular={true}>
@@ -42,7 +40,7 @@ export function WorkList() {
               key={index}
               style={{ backgroundColor: panel.color }}
             >
-              <img src={panel.image} />
+              <img src={panel.image} alt="" />
               <a
                 href={panel.link}
                 className="flicking-index text-decoration-none"
