@@ -3,8 +3,6 @@ import { useTranslation } from "react-i18next";
 
 export function LanguageToggle() {
   const { i18n } = useTranslation();
-  const currentLanguage = localStorage.getItem("language") || "en";
-
   function toggleLanguage(language: string) {
     i18n.changeLanguage(language);
     localStorage.setItem("language", language);
@@ -15,6 +13,7 @@ export function LanguageToggle() {
       className="align-items-center"
       type="radio"
       name="options"
+      defaultValue={0}
     >
       {["en", "ru"].map((language, index) => (
         <ToggleButton
@@ -22,7 +21,7 @@ export function LanguageToggle() {
           id={`tbg-radio-${index}`}
           value={index}
           key={index}
-          active={currentLanguage === language}
+          active={language === localStorage.getItem("language")}
           variant="outline-secondary"
           onChange={() => toggleLanguage(language)}
         >
