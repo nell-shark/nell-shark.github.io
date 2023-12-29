@@ -7,7 +7,7 @@
     "start": "craco start",
     "build": "svgo -f ./src/assets/svg && craco build",
     "test": "craco test",
-    "predeploy": "npm run build && echo mock-api-hub.ru > ./build/CNAME",
+    "predeploy": "npm run build && echo krivolapovva.ru > ./build/CNAME",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
