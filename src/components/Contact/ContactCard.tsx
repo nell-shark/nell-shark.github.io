@@ -1,4 +1,4 @@
-import { ContactInfo } from "@/typings/contact";
+import { ContactInfo } from "@/typings";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export interface ContactCardProps extends ContactInfo {}

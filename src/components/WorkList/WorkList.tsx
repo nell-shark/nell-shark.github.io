@@ -1,8 +1,4 @@
-import {
-  FIPS_URL,
-  MOCK_API_HUB_URL,
-  SPRING_BOOT_REACT_TRACK_PLAYER_URL as TRACK_PLAYER_URL,
-} from "@/data/constants";
+import { FIPS_URL, MOCK_API_HUB_URL, TRACK_PLAYER_URL } from "@/constants";
 import "@egjs/flicking/dist/flicking.css";
 import Flicking from "@egjs/react-flicking";
 import Certificate from "@/assets/svg/certificate.svg";

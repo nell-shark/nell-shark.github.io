@@ -1,4 +1,4 @@
-import { CONTACT_INFO_LIST } from "@/data/constants";
+import { CONTACT_INFO_LIST } from "@/constants";
 import { Container } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import "./Contact.css";

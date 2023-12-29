@@ -1,5 +1,5 @@
 import MyPhoto from "@/assets/svg/me.svg";
-import { CONTACT_INFO_LIST } from "@/data/constants";
+import { CONTACT_INFO_LIST } from "@/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
