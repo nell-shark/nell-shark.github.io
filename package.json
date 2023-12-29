@@ -28,6 +28,7 @@
     "react-type-animation": "^3.2.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@craco/craco": "^7.1.0",
     "@types/node": "^20.10.5",
     "@types/react": "^18.2.45",
