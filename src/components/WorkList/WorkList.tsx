@@ -16,7 +16,7 @@ interface WorkPanel {
 const panels: WorkPanel[] = [
   { color: "#f14668", image: Certificate, link: FIPS_URL },
   { color: "#3e8ed0", image: MockApiHub, link: MOCK_API_HUB_URL },
-  { color: "#48c78e", image: TrackPlayer, link: TRACK_PLAYER_URL },
+  { color: "#48c78e", image: TrackPlayer, link: TRACK_PLAYER_URL }
 ];
 
 export function WorkList() {
@@ -31,16 +31,9 @@ export function WorkList() {
       <div>
         <Flicking renderOnlyVisible={true} circular={true}>
           {panels.map((panel, index) => (
-            <div
-              className="flicking-panel"
-              key={index}
-              style={{ backgroundColor: panel.color }}
-            >
+            <div className="flicking-panel" key={index} style={{ backgroundColor: panel.color }}>
               <img src={panel.image} alt="" />
-              <a
-                href={panel.link}
-                className="flicking-index text-decoration-none"
-              >
+              <a href={panel.link} className="flicking-index text-decoration-none">
                 {index + 1}
               </a>
             </div>

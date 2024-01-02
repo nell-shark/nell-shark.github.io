@@ -11,7 +11,7 @@ export function About() {
     { year: 2005, text: t("school") },
     { year: 2014, text: t("college") },
     { year: 2017, text: t("university") },
-    { year: 2022, text: t("science") },
+    { year: 2022, text: t("science") }
   ];
 
   return (

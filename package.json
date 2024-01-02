@@ -7,6 +7,7 @@
     "start": "craco start",
     "build": "svgo -f ./src/assets/svg && craco build",
     "test": "craco test",
+    "prettier": "prettier  . --write",
     "predeploy": "npm run build && echo krivolapovva.ru > ./build/CNAME",
     "deploy": "gh-pages -d build"
   },
@@ -34,6 +35,7 @@
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
     "gh-pages": "^6.1.1",
+    "prettier": "^3.1.1",
     "svgo": "^3.1.0",
     "typescript": "^4.9.5"
   },

@@ -12,7 +12,7 @@ export function Profile() {
   const [forceUpdate, setForceUpdate] = useState(0);
 
   useEffect(() => {
-    setForceUpdate((prev) => ++prev);
+    setForceUpdate(prev => ++prev);
   }, [localStorage.getItem("language")]);
 
   return (
@@ -35,7 +35,7 @@ export function Profile() {
               t("greeting-3"),
               1000,
               t("greeting-4"),
-              1000,
+              1000
             ]}
             preRenderFirstString={true}
             wrapper="span"
@@ -44,7 +44,7 @@ export function Profile() {
               fontSize: "4vw",
               fontWeight: "400",
               display: "inline-block",
-              whiteSpace: "pre-line",
+              whiteSpace: "pre-line"
             }}
             repeat={Infinity}
             key={forceUpdate}

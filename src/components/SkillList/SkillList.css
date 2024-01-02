@@ -68,7 +68,8 @@
     rgba(118, 74, 166, 1) 81%
   );
 
-  box-shadow: inset 50px 50px 17px 0px #ff588b,
+  box-shadow:
+    inset 50px 50px 17px 0px #ff588b,
     inset 100px 100px 17px 0px #66319f;
 }
 

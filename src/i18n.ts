@@ -5,11 +5,11 @@ import { initReactI18next } from "react-i18next";
 
 const resources = {
   en: {
-    translation: translationEN,
+    translation: translationEN
   },
   ru: {
-    translation: translationRU,
-  },
+    translation: translationRU
+  }
 };
 
 export const i18nInstance = i18n.use(initReactI18next).init({
@@ -17,6 +17,6 @@ export const i18nInstance = i18n.use(initReactI18next).init({
   lng: localStorage.getItem("language") || "en",
   fallbackLng: "en",
   interpolation: {
-    escapeValue: false,
-  },
+    escapeValue: false
+  }
 });

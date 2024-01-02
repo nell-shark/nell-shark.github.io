@@ -7,10 +7,10 @@ export function CustomAnimatedCursor() {
       <AnimatedCursor
         color="156, 39, 176"
         innerStyle={{
-          backgroundColor: "#000",
+          backgroundColor: "#000"
         }}
         outerStyle={{
-          mixBlendMode: "exclusion",
+          mixBlendMode: "exclusion"
         }}
         outerSize={8}
       />

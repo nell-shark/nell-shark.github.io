@@ -9,12 +9,7 @@ export function LanguageToggle() {
   }
 
   return (
-    <ToggleButtonGroup
-      className="align-items-center"
-      type="radio"
-      name="options"
-      defaultValue={0}
-    >
+    <ToggleButtonGroup className="align-items-center" type="radio" name="options" defaultValue={0}>
       {["en", "ru"].map((language, index) => (
         <ToggleButton
           className="text-uppercase"

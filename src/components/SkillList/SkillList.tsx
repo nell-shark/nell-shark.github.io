@@ -20,17 +20,14 @@ const skills = [
   { name: "junit", svg: JUnit, gridArea: "cube-3" },
   { name: "git", svg: Git, gridArea: "cube-4" },
   { name: "nginx", svg: Nginx, gridArea: "cube-5" },
-  { name: "react", svg: React, gridArea: "cube-6" },
+  { name: "react", svg: React, gridArea: "cube-6" }
 ];
 
 export function SkillList() {
   const { t } = useTranslation();
 
   return (
-    <Container
-      id="skills"
-      className="d-flex flex-column justify-content-center mb-5"
-    >
+    <Container id="skills" className="d-flex flex-column justify-content-center mb-5">
       <div className="text-center justify-content-center mb-5">
         <h2 className="font-weight-bold">{t("skills")}</h2>
         <p className="text-muted">{t("skills-text")}</p>

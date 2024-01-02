@@ -14,12 +14,8 @@ export function Navbar() {
         <NavbarBS.Toggle aria-controls="responsive-navbar-nav" />
         <NavbarBS.Collapse id="responsive-navbar-nav">
           <Nav className="m-auto pt-4">
-            {["about", "skills", "works", "contact"].map((section) => (
-              <Nav.Link
-                href={`#${section}`}
-                className="navbar-brand px-3 fs-3"
-                key={section}
-              >
+            {["about", "skills", "works", "contact"].map(section => (
+              <Nav.Link href={`#${section}`} className="navbar-brand px-3 fs-3" key={section}>
                 {t(section)}
               </Nav.Link>
             ))}

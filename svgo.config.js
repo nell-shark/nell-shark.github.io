@@ -6,10 +6,10 @@ module.exports = {
         overrides: {
           removeViewBox: false,
           inlineStyles: {
-            onlyMatchedOnce: false,
-          },
-        },
-      },
-    },
-  ],
+            onlyMatchedOnce: false
+          }
+        }
+      }
+    }
+  ]
 };
