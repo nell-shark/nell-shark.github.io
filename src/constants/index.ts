@@ -16,3 +16,6 @@ export const CONTACT_INFO_LIST: ContactInfo[] = [
   { tag: "telegram", href: TELEGRAM_URL, icon: faTelegram },
   { tag: "email", href: EMAIL_URL, icon: faAt }
 ];
+
+
+export const LANGUAGE_LIST: string[] = ["en", "ru"];

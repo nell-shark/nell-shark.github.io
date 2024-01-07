@@ -3,13 +3,14 @@ import { useTranslation } from "react-i18next";
 
 export function LanguageToggle() {
   const { i18n } = useTranslation();
+
   function toggleLanguage(language: string) {
     i18n.changeLanguage(language);
     localStorage.setItem("language", language);
   }
 
   return (
-    <ToggleButtonGroup className="align-items-center" type="radio" name="options" defaultValue={0}>
+    <ToggleButtonGroup className="align-items-center" type="radio" name="options">
       {["en", "ru"].map((language, index) => (
         <ToggleButton
           className="text-uppercase"
