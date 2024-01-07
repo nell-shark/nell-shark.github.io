@@ -12,7 +12,7 @@ export function Profile() {
   const [forceUpdate, setForceUpdate] = useState(0);
 
   useEffect(() => {
-    setForceUpdate(prev => ++prev);
+    setForceUpdate(prev => prev + 1);
   }, [localStorage.getItem("language")]);
 
   return (
@@ -40,18 +40,13 @@ export function Profile() {
             preRenderFirstString={true}
             wrapper="span"
             speed={50}
-            style={{
-              fontSize: "4vw",
-              fontWeight: "400",
-              display: "inline-block",
-              whiteSpace: "pre-line"
-            }}
             repeat={Infinity}
             key={forceUpdate}
+            className="type-animation"
           />
         </div>
       </div>
-      <div className="text-center pb-3">
+      <div className="text-center pb-5">
         {CONTACT_INFO_LIST.map((contact, index) => (
           <a href={contact.href} className="px-4" key={index}>
             <FontAwesomeIcon icon={contact.icon} size="2x" color="black" />

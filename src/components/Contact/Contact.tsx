@@ -17,8 +17,8 @@ export function Contact() {
         <p className="text-muted">{t("contact-text")}</p>
       </div>
       <ul className="d-flex list-inline">
-        {CONTACT_INFO_LIST.map((card, index) => (
-          <ContactCard {...card} key={index} />
+        {CONTACT_INFO_LIST.map(card => (
+          <ContactCard {...card} key={card.tag} />
         ))}
       </ul>
     </Container>

@@ -1,3 +1,4 @@
+import { LANGUAGE_LIST } from "@/constants";
 import { ToggleButton, ToggleButtonGroup } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 
@@ -11,12 +12,12 @@ export function LanguageToggle() {
 
   return (
     <ToggleButtonGroup className="align-items-center" type="radio" name="options">
-      {["en", "ru"].map((language, index) => (
+      {LANGUAGE_LIST.map(language => (
         <ToggleButton
           className="text-uppercase"
-          id={`tbg-radio-${index}`}
-          value={index}
-          key={index}
+          id={`tbg-radio-${language}`}
+          value={language}
+          key={language}
           active={language === localStorage.getItem("language")}
           variant="outline-secondary"
           onChange={() => toggleLanguage(language)}

@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import { LANGUAGE_LIST } from "./constants";
+import { LANGUAGE_LIST } from "@/constants";
 
 const DEFAULT_LANGUAGE = LANGUAGE_LIST[0] || "en";
 
