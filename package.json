@@ -4,7 +4,7 @@
   "homepage": "https://nell-shark.github.io",
   "private": false,
   "scripts": {
-    "start": "craco start",
+    "dev": "craco start",
     "build": "svgo -f ./src/assets/svg && craco build",
     "test": "craco test",
     "prettier": "prettier  . --write",

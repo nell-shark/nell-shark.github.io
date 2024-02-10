@@ -33,8 +33,6 @@ export function Profile() {
               t("greeting-2"),
               1000,
               t("greeting-3"),
-              1000,
-              t("greeting-4"),
               1000
             ]}
             preRenderFirstString={true}
