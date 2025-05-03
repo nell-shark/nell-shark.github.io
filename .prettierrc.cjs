@@ -1,5 +1,5 @@
+/** @type {import("prettier").Config} */
 module.exports = {
-  plugins: [require.resolve('@trivago/prettier-plugin-sort-imports')],
   printWidth: 120,
   arrowParens: 'avoid',
   bracketSpacing: true,
@@ -10,9 +10,5 @@ module.exports = {
   jsxSingleQuote: true,
   quoteProps: 'as-needed',
   requirePragma: false,
-  trailingComma: 'none',
-  importOrderSortSpecifiers: true,
-  importOrderCaseInsensitive: true,
-  importOrderSeparation: true,
-  importOrder: ['^react', '^@mui/(.*)$', '^@/(.*)$', '^[./]']
+  trailingComma: 'none'
 };
