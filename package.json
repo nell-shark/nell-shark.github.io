@@ -1,54 +1,29 @@
 {
-  "name": "portfolio",
-  "version": "1.0",
-  "homepage": "https://nell-shark.github.io",
-  "private": false,
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "craco start",
-    "build": "svgo -f ./src/assets/svg && craco build",
-    "test": "craco test",
-    "prettier": "prettier  . --write",
-    "predeploy": "npm run build && echo krivolapovva.ru > ./build/CNAME",
-    "deploy": "gh-pages -d build"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@egjs/react-flicking": "^4.11.2",
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/free-brands-svg-icons": "^6.5.1",
-    "@fortawesome/free-regular-svg-icons": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "bootstrap": "^5.3.2",
-    "i18next": "^23.7.11",
-    "react": "^18.2.0",
-    "react-animated-cursor": "^2.11.2",
-    "react-bootstrap": "^2.9.1",
-    "react-dom": "^18.2.0",
-    "react-i18next": "^14.0.0",
-    "react-scripts": "5.0.1",
-    "react-type-animation": "^3.2.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@craco/craco": "^7.1.0",
-    "@types/node": "^20.10.5",
-    "@types/react": "^18.2.45",
-    "@types/react-dom": "^18.2.18",
-    "gh-pages": "^6.1.1",
-    "prettier": "^3.1.1",
-    "svgo": "^3.1.0",
-    "typescript": "^4.9.5"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@eslint/js": "^9.22.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.22.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.26.1",
+    "vite": "^6.3.1"
   }
 }
