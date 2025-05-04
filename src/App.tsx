@@ -1,3 +1,9 @@
+import { Navbar } from '@/components/Navbar';
+
 export function App() {
-  return <h1>Hello world!</h1>;
+  return (
+    <main className='container mx-auto h-[200vh]'>
+      <Navbar />
+    </main>
+  );
 }
