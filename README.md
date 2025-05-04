@@ -33,7 +33,7 @@
 ## 🛠 Tech Stack
 
 - **Frontend:** React + Vite
-- **UI Framework:** Material UI (MUI)
+- **UI Framework:** Tailwind CSS
 - **Deployment:** GitHub Pages
 
 ## 📦 Getting Started
