@@ -1,13 +1,18 @@
+@import 'tailwindcss';
+
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+html {
   scroll-behavior: smooth;
+}
+
+body {
   background: rgb(17, 17, 17);
 }
 
