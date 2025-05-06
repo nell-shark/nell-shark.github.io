@@ -11,7 +11,7 @@ const SocialLinks = [
 export function Home() {
   return (
     <section
-      id='#home'
+      id='home'
       className='relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-transparent'
     >
       <DotsBackground />
