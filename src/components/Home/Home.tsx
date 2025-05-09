@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 import { DotsBackground } from '@/components/Home/DotsBackground';
 import { SocialLink } from '@/components/Home/SocialLink';
 import { EMAIL_URL, GITHUB_PROFILE_URL, TELEGRAM_PROFILE_URL } from '@/data/info';
@@ -17,20 +19,44 @@ export function Home() {
       <DotsBackground />
 
       <div className='z-1 mx-auto max-w-4xl space-y-4 px-4 text-center md:space-y-6'>
-        <div className='animate-[fadeIn_0.5s_ease-in-out] bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text font-mono text-5xl text-transparent sm:text-6xl md:text-7xl'>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.25, ease: 'anticipate' }}
+          className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text font-mono text-5xl text-transparent sm:text-6xl md:text-7xl'
+        >
           &lt;Hello World /&gt;
-        </div>
+        </motion.div>
 
-        <h1 className='animate-[fadeIn_1s_ease-in-out] text-4xl font-bold text-white'>I'm Krivolapov Vladislav</h1>
+        <motion.h1
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: 'anticipate' }}
+          className='text-4xl font-bold text-white'
+        >
+          I'm Krivolapov Vladislav
+        </motion.h1>
 
-        <p className='animate-[fadeIn_1.5s_ease-in-out] text-lg text-amber-400'>Back-End Developer</p>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.75, ease: 'anticipate' }}
+          className='text-lg text-amber-400'
+        >
+          Back-End Developer
+        </motion.p>
       </div>
 
-      <div className='z-1 mt-6 flex animate-[fadeIn_2s_ease-in-out] gap-4'>
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'anticipate' }}
+        className='z-1 mt-6 flex gap-4'
+      >
         {SocialLinks.map(({ href, text, isExternal }) => (
           <SocialLink key={href} href={href} text={text} isExternal={isExternal} />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
