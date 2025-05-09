@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import Logo from '@/assets/logo.svg';
+import Logo from '@/assets/images/logo.svg';
 import { NavbarItem } from '@/components/Navbar/NavbarItem';
 
 const NAVBAR_ITEMS = [
