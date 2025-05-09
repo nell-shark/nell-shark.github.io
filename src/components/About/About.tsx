@@ -40,7 +40,7 @@ export function About() {
         <div className='relative col-span-12 space-y-6 px-4 sm:col-span-9'>
           <div className='relative col-span-12 space-y-12 px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:-left-3 sm:before:w-0.5 before:dark:bg-gray-300'>
             {steps.map(step => (
-              <TimelineStep {...step} />
+              <TimelineStep key={step.year} {...step} />
             ))}
           </div>
         </div>
