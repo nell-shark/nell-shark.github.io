@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 
+import Logo from '@/assets/images/Pixar.png';
 import { DotsBackground } from '@/components/Home/DotsBackground';
 import { SocialLink } from '@/components/Home/SocialLink';
 import { EMAIL_URL, GITHUB_PROFILE_URL, TELEGRAM_PROFILE_URL } from '@/data/info';
@@ -17,6 +18,13 @@ export function Home() {
       className='relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-transparent'
     >
       <DotsBackground />
+      <img
+        src={Logo}
+        alt='Pixar'
+        width='150'
+        height='220'
+        className='z-[1] rounded-full border-1 border-transparent p-1 transition-all duration-500 ease-in-out hover:rounded-full hover:border-black'
+      />
 
       <div className='z-1 mx-auto max-w-4xl space-y-4 px-4 text-center md:space-y-6'>
         <motion.div
