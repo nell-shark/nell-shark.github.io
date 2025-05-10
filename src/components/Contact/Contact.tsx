@@ -49,7 +49,7 @@ export function Contact() {
           </span>
           with me
         </h1>
-        <p className='mb-6 text-xl text-gray-300'>Get in touch to create something extraordinary together</p>
+        <p className='mb-8 text-xl text-gray-300'>Get in touch to create something extraordinary together</p>
         <div className='flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-5'>
           {ContactItems.map((item, index) => (
             <motion.div
