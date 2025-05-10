@@ -3,7 +3,13 @@ import { motion } from 'framer-motion';
 import Pixar from '@/assets/images/pixar.png';
 import { DotsBackground } from '@/components/Home/DotsBackground';
 import { SocialLink } from '@/components/Home/SocialLink';
-import { SocialLinks } from '@/data/info';
+import { EMAIL_URL, GITHUB_PROFILE_URL, TELEGRAM_PROFILE_URL } from '@/data/info';
+
+const SocialLinks = [
+  { href: GITHUB_PROFILE_URL, text: 'GitHub' },
+  { href: EMAIL_URL, text: 'Email' },
+  { href: TELEGRAM_PROFILE_URL, text: 'Telegram' }
+];
 
 export function Home() {
   return (
@@ -15,9 +21,7 @@ export function Home() {
       <img
         src={Pixar}
         alt='Pixar'
-        width='150'
-        height='220'
-        className='z-[1] rounded-full border-1 border-transparent p-1 transition-all duration-500 ease-in-out hover:rounded-full hover:border-black'
+        className='z-[1] h-[220px] w-[150px] rounded-full border-1 border-transparent p-1 transition-all duration-500 ease-in-out hover:rounded-full hover:border-black'
       />
 
       <div className='z-1 mx-auto max-w-4xl space-y-4 px-4 text-center md:space-y-6'>
@@ -55,8 +59,8 @@ export function Home() {
         transition={{ duration: 1, ease: 'anticipate' }}
         className='z-1 mt-6 flex gap-4'
       >
-        {SocialLinks.map(({ href, text, isExternal }) => (
-          <SocialLink key={href} href={href} text={text} isExternal={isExternal} />
+        {SocialLinks.map(link => (
+          <SocialLink key={link.href} {...link} />
         ))}
       </motion.div>
     </section>
