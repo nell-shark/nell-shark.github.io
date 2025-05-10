@@ -1,15 +1,9 @@
 import { motion } from 'framer-motion';
 
-import Logo from '@/assets/images/Pixar.png';
+import Pixar from '@/assets/images/pixar.png';
 import { DotsBackground } from '@/components/Home/DotsBackground';
 import { SocialLink } from '@/components/Home/SocialLink';
-import { EMAIL_URL, GITHUB_PROFILE_URL, TELEGRAM_PROFILE_URL } from '@/data/info';
-
-const SocialLinks = [
-  { href: GITHUB_PROFILE_URL, text: 'GitHub', isExternal: true },
-  { href: EMAIL_URL, text: 'Email', isExternal: false },
-  { href: TELEGRAM_PROFILE_URL, text: 'Telegram', isExternal: true }
-];
+import { SocialLinks } from '@/data/info';
 
 export function Home() {
   return (
@@ -19,7 +13,7 @@ export function Home() {
     >
       <DotsBackground />
       <img
-        src={Logo}
+        src={Pixar}
         alt='Pixar'
         width='150'
         height='220'
