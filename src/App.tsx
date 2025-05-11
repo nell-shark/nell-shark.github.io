@@ -3,6 +3,7 @@ import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { Home } from '@/components/Home';
 import { Navbar } from '@/components/Navbar';
+import { Skills } from '@/components/Skills';
 
 export function App() {
   return (
@@ -10,6 +11,7 @@ export function App() {
       <Navbar />
       <Home />
       <About />
+      <Skills />
       <Contact />
       <Footer />
     </main>
