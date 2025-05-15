@@ -6,5 +6,5 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tsconfigPaths(), tailwindcss()],
-  base: '/nell-shark.github.io/'
+  base: 'https://nell-shark.github.io/nell-shark.github.io/'
 });
