@@ -1,6 +1,7 @@
 {
   "name": "nell-shark.github.io",
   "private": false,
+  "homepage": "https://github.com/nell-shark/nell-shark.github.io",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
