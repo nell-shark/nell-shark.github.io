@@ -30,7 +30,7 @@ const steps = [
 
 export function About() {
   return (
-    <section id='about' className='flex min-h-[100vh] items-center justify-center'>
+    <section id='about' className='flex min-h-[80vh] items-center justify-center'>
       <div className='mx-4 grid gap-4 sm:grid-cols-12'>
         <div className='col-span-12 sm:col-span-3'>
           <div className='mb-14 text-center before:mx-auto before:mb-5 before:block before:h-3 before:w-24 before:rounded-md sm:text-left sm:before:mx-0 before:dark:bg-violet-600'>

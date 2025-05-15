@@ -7,9 +7,9 @@ type EmblaSlideProps = {
 export function EmblaSlide({ title, description, href }: Readonly<EmblaSlideProps>) {
   return (
     <div className='embla__slide relative'>
-      <div className='embla__slide__number flex flex-col'>
-        <h1>{title}</h1>
-        <p className='text-sm font-thin text-gray-300'>{description}</p>
+      <div className='embla__slide__number flex flex-col text-center'>
+        <h1 className='text-lg font-semibold text-white sm:text-2xl md:text-3xl lg:text-4xl'>{title}</h1>
+        <p className='text-xs font-light text-gray-300 sm:text-sm md:text-base'>{description}</p>
       </div>
 
       <div className='absolute bottom-4 left-8'>

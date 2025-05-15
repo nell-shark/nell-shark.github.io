@@ -30,7 +30,7 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-4 z-50 mx-auto h-[60px] w-full max-w-screen-lg rounded-3xl border border-transparent px-5 shadow-sm backdrop-blur-[10px] transition-colors duration-300 ${background}`}
+      className={`fixed inset-x-0 top-4 z-50 mx-auto h-[60px] w-full max-w-screen-lg rounded-3xl border border-transparent px-5 shadow-sm backdrop-blur-[10px] transition-colors duration-300 ${background} max-sm:hidden`}
     >
       <div className='mx-auto flex h-[60px] w-full items-center justify-between'>
         <img src={Logo} alt='Logo' width='40' height='40' />

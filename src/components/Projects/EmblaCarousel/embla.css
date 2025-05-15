@@ -32,11 +32,17 @@
   --admonition-warning-rgb-value: 253, 186, 116;
   --admonition-danger-rgb-value: 220, 38, 38;
   color: white;
-  max-width: 64rem;
+  max-width: 70%;
   margin: auto;
   --slide-height: 28rem;
   --slide-spacing: 1rem;
   --slide-size: 70%;
+}
+
+@media (max-width: 1366px) {
+  .embla {
+    max-width: 100%;
+  }
 }
 
 .embla__viewport {
@@ -73,6 +79,12 @@
   justify-content: space-between;
   gap: 1.2rem;
   margin-top: 1.8rem;
+}
+
+@media (max-width: 640px) {
+  .embla__controls {
+    display: none;
+  }
 }
 
 .embla__buttons {
