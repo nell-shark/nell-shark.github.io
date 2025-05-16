@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-import Pixar from '@/assets/images/pixar.png';
+import Pixar from '@/assets/images/pixar.webp';
 import { DotsBackground } from '@/components/Home/DotsBackground';
 import { SocialLink } from '@/components/Home/SocialLink';
 import { EMAIL_URL, GITHUB_PROFILE_URL, TELEGRAM_PROFILE_URL } from '@/data/info';
