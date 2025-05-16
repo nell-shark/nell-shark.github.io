@@ -1,17 +1,20 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Logo from '@/assets/images/logo.svg';
 import { NavbarItem } from '@/components/Navbar/NavbarItem';
 
-const NAVBAR_ITEMS = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about-me' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' }
-];
-
 export function Navbar() {
+  const { t } = useTranslation();
+
+  const NAVBAR_ITEMS = [
+    { label: t('home'), href: '#home' },
+    { label: t('about'), href: '#about' },
+    { label: t('skills'), href: '#skills' },
+    { label: t('projects'), href: '#projects' },
+    { label: t('contact'), href: '#contact' }
+  ];
+
   const [scrolled, setScrolled] = useState(false);
   const background = scrolled ? 'bg-background/80' : 'bg-black/80';
 
@@ -37,7 +40,7 @@ export function Navbar() {
         <nav className='flex items-center space-x-3'>
           <ul className='flex space-x-2'>
             {NAVBAR_ITEMS.map(({ href, label }) => (
-              <NavbarItem key={href} label={label} href={`#${label.toLowerCase()}`} />
+              <NavbarItem key={href} label={label} href={href} />
             ))}
           </ul>
         </nav>
