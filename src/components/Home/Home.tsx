@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 import Pixar from '@/assets/images/pixar.webp';
 import { DotsBackground } from '@/components/Home/DotsBackground';
@@ -12,6 +13,8 @@ const SocialLinks = [
 ];
 
 export function Home() {
+  const { t } = useTranslation();
+
   return (
     <section
       id='home'
@@ -40,7 +43,7 @@ export function Home() {
           transition={{ duration: 0.5, ease: 'anticipate' }}
           className='text-4xl font-bold text-white'
         >
-          I'm Krivolapov Vladislav
+          {t('Im_Krivolapov_Vladislav')}
         </motion.h1>
 
         <motion.p
