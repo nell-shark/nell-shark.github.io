@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Docker from '@/assets/images/docker.svg';
 import Electron from '@/assets/images/electron.svg';
@@ -80,6 +81,7 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 export function Skills() {
+  const { t } = useTranslation();
   const shuffledItems = useMemo(() => shuffleArray(skillItems), []);
 
   return (
@@ -88,7 +90,7 @@ export function Skills() {
       className='flex min-h-[100vh] flex-wrap content-center items-center justify-center max-sm:mt-5'
     >
       <div className='mb-8 w-full text-center'>
-        <h2 className='text-5xl font-bold text-white'>My Skills</h2>
+        <h2 className='text-5xl font-bold text-white'>{t('skills.skills')}</h2>
       </div>
       <div className='flex flex-wrap items-center justify-center space-x-2 text-center'>
         {shuffledItems.map((item, index) => (
@@ -103,7 +105,7 @@ export function Skills() {
           </motion.div>
         ))}
       </div>
-      <p className='text-center text-white'>...and many others!</p>
+      <p className='text-center text-white'>{t('skills.and_many_others')}</p>
     </section>
   );
 }

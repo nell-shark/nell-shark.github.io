@@ -8,11 +8,11 @@ export function Navbar() {
   const { t } = useTranslation();
 
   const NAVBAR_ITEMS = [
-    { label: t('home'), href: '#home' },
-    { label: t('about'), href: '#about' },
-    { label: t('skills'), href: '#skills' },
-    { label: t('projects'), href: '#projects' },
-    { label: t('contact'), href: '#contact' }
+    { label: t('navbar.items.home'), href: '#home' },
+    { label: t('navbar.items.about'), href: '#about' },
+    { label: t('navbar.items.skills'), href: '#skills' },
+    { label: t('navbar.items.projects'), href: '#projects' },
+    { label: t('navbar.items.contact'), href: '#contact' }
   ];
 
   const [scrolled, setScrolled] = useState(false);

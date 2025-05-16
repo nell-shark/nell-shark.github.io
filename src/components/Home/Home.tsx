@@ -43,7 +43,7 @@ export function Home() {
           transition={{ duration: 0.5, ease: 'anticipate' }}
           className='text-4xl font-bold text-white'
         >
-          {t('Im_Krivolapov_Vladislav')}
+          {t('home.introduction')}
         </motion.h1>
 
         <motion.p
