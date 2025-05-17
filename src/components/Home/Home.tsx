@@ -41,7 +41,7 @@ export function Home() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: 'anticipate' }}
-          className='text-4xl font-bold text-white'
+          className='text-4xl font-normal text-white'
         >
           {t('home.introduction')}
         </motion.h1>
