@@ -2,10 +2,13 @@ import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import Logo from '@/assets/images/logo.svg';
+import { LanguageSelect } from '@/components/Navbar/LanguageSelect';
 import { NavbarItem } from '@/components/Navbar/NavbarItem';
 
 export function Navbar() {
   const { t } = useTranslation();
+  const [scrolled, setScrolled] = useState(false);
+  const background = scrolled ? 'bg-background/80' : 'bg-black/80';
 
   const NAVBAR_ITEMS = [
     { label: t('navbar.items.home'), href: '#home' },
@@ -14,9 +17,6 @@ export function Navbar() {
     { label: t('navbar.items.projects'), href: '#projects' },
     { label: t('navbar.items.contact'), href: '#contact' }
   ];
-
-  const [scrolled, setScrolled] = useState(false);
-  const background = scrolled ? 'bg-background/80' : 'bg-black/80';
 
   useEffect(() => {
     function handleScroll() {
@@ -32,19 +32,26 @@ export function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-4 z-50 mx-auto h-[60px] w-full max-w-screen-lg rounded-3xl border border-transparent px-5 shadow-sm backdrop-blur-[10px] transition-colors duration-300 ${background} max-sm:hidden`}
-    >
-      <div className='mx-auto flex h-[60px] w-full items-center justify-between'>
-        <img src={Logo} alt='Logo' width='40' height='40' />
-        <nav className='flex items-center space-x-3'>
-          <ul className='flex space-x-2'>
-            {NAVBAR_ITEMS.map(({ href, label }) => (
-              <NavbarItem key={href} label={label} href={href} />
-            ))}
-          </ul>
-        </nav>
+    <>
+      <div className='absolute top-4 right-4 z-50 sm:hidden'>
+        <LanguageSelect />
       </div>
-    </header>
+
+      <header
+        className={`fixed inset-x-0 top-4 z-40 mx-auto h-[60px] w-full max-w-screen-lg rounded-3xl border border-transparent px-5 shadow-sm backdrop-blur-[10px] transition-colors duration-300 ${background} isolate max-sm:hidden`}
+      >
+        <div className='mx-auto flex h-[60px] w-full items-center justify-between'>
+          <img src={Logo} alt='Logo' width='40' height='40' />
+          <nav className='flex items-center space-x-3'>
+            <ul className='flex space-x-2'>
+              {NAVBAR_ITEMS.map(({ href, label }) => (
+                <NavbarItem key={href} label={label} href={href} />
+              ))}
+            </ul>
+          </nav>
+          <LanguageSelect />
+        </div>
+      </header>
+    </>
   );
 }
