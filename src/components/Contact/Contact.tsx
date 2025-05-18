@@ -8,32 +8,32 @@ import Telegram from '@/assets/images/telegram.svg';
 import { ContactItem } from '@/components/Contact/ContactItem';
 import { EMAIL_URL, GITHUB_PROFILE_URL, TELEGRAM_PROFILE_URL } from '@/data/info';
 
+const ContactItems = [
+  {
+    href: GITHUB_PROFILE_URL,
+    alt: 'Github',
+    icon: Github,
+    border: '#90A4AE',
+    bg: '#ECEFF1'
+  },
+  {
+    href: EMAIL_URL,
+    alt: 'Gmail',
+    icon: Gmail,
+    border: '#a5b2ab',
+    bg: '#ecfff5'
+  },
+  {
+    href: TELEGRAM_PROFILE_URL,
+    alt: 'Telegram',
+    icon: Telegram,
+    border: '#2a7faa',
+    bg: '#c8eaf7'
+  }
+];
+
 export function Contact() {
   const { t } = useTranslation();
-
-  const ContactItems = [
-    {
-      href: GITHUB_PROFILE_URL,
-      alt: 'Github',
-      icon: Github,
-      border: '#90A4AE',
-      bg: '#ECEFF1'
-    },
-    {
-      href: EMAIL_URL,
-      alt: 'Gmail',
-      icon: Gmail,
-      border: '#a5b2ab',
-      bg: '#ecfff5'
-    },
-    {
-      href: TELEGRAM_PROFILE_URL,
-      alt: 'Telegram',
-      icon: Telegram,
-      border: '#2a7faa',
-      bg: '#c8eaf7'
-    }
-  ];
 
   return (
     <section
