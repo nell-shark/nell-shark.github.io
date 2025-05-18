@@ -7,6 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Directories for dependencies and compiled code
 node_modules
 dist
 dist-ssr
