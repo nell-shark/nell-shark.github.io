@@ -29,7 +29,7 @@ export function LanguageModal({ onClose }: Readonly<LanguageModalProps>) {
       style={{
         backdropFilter: blurActive ? 'blur(6px)' : 'blur(0)',
         WebkitBackdropFilter: blurActive ? 'blur(6px)' : 'blur(0)',
-        transition: 'backdrop-filter 0.5s ease'
+        transition: 'backdrop-filter 0.3s ease-in'
       }}
       onClick={onClose}
     >
