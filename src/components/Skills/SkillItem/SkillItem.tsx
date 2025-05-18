@@ -44,7 +44,7 @@ export function SkillItem({ href, imageSrc, text }: Readonly<SkillItemProps>) {
       href={href}
       target='_blank'
       rel='noopener noreferrer'
-      className='relative mb-2 flex h-[128px] w-[128px] flex-col items-center justify-center overflow-hidden rounded-xl border border-zinc-700 bg-zinc-900 p-4 transition duration-200 hover:border-zinc-500'
+      className='relative mb-2 flex h-[128px] w-[128px] flex-col items-center justify-center overflow-hidden rounded-xl border border-zinc-700 bg-zinc-900 p-4 transition duration-200 hover:border-zinc-500 max-sm:h-[90px] max-sm:w-[90px]'
       onMouseMove={handleMouseMove}
       onFocus={handleFocus}
       onBlur={handleBlur}
@@ -58,7 +58,7 @@ export function SkillItem({ href, imageSrc, text }: Readonly<SkillItemProps>) {
           background: `radial-gradient(300px circle at ${position.x}px ${position.y}px, rgba(255, 255, 255, 0.2), transparent 40%)`
         }}
       />
-      <img src={imageSrc} alt={text} className='z-1 mb-2 h-10' />
+      <img src={imageSrc} alt={text} className='z-1 mb-2 h-10 max-sm:h-7' />
       <span className='z-1 text-zinc-200'>{text}</span>
     </a>
   );
