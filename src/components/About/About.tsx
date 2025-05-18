@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { TimelineStep } from '@/components/About/TimelineStep';
@@ -5,33 +6,36 @@ import { TimelineStep } from '@/components/About/TimelineStep';
 export function About() {
   const { t } = useTranslation();
 
-  const steps = [
-    {
-      year: 1998,
-      title: t('about.steps.born.title'),
-      text: t('about.steps.born.text')
-    },
-    {
-      year: 2005,
-      title: t('about.steps.school.title'),
-      text: t('about.steps.school.text')
-    },
-    {
-      year: 2014,
-      title: t('about.steps.college.title'),
-      text: t('about.steps.college.text')
-    },
-    {
-      year: 2017,
-      title: t('about.steps.university.title'),
-      text: t('about.steps.university.text')
-    },
-    {
-      year: 2022,
-      title: t('about.steps.programming.title'),
-      text: t('about.steps.programming.text')
-    }
-  ];
+  const steps = useMemo(
+    () => [
+      {
+        year: 1998,
+        title: t('about.steps.born.title'),
+        text: t('about.steps.born.text')
+      },
+      {
+        year: 2005,
+        title: t('about.steps.school.title'),
+        text: t('about.steps.school.text')
+      },
+      {
+        year: 2014,
+        title: t('about.steps.college.title'),
+        text: t('about.steps.college.text')
+      },
+      {
+        year: 2017,
+        title: t('about.steps.university.title'),
+        text: t('about.steps.university.text')
+      },
+      {
+        year: 2022,
+        title: t('about.steps.programming.title'),
+        text: t('about.steps.programming.text')
+      }
+    ],
+    [t]
+  );
 
   return (
     <section id='about' className='flex min-h-[80vh] items-center justify-center'>
