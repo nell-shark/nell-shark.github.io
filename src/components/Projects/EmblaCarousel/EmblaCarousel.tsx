@@ -1,6 +1,7 @@
 import './embla.css';
 
 import useEmblaCarousel from 'embla-carousel-react';
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { DotButton, NextButton, PrevButton } from '@/components/Projects/EmblaCarousel/Button';
@@ -10,43 +11,46 @@ import { usePrevNextButtons } from '@/hooks/usePrevNextButtons';
 
 export function EmblaCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
-  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
-
   const { t } = useTranslation();
 
-  const slides = [
-    {
-      title: t('projects.slides.develop.title'),
-      description: t('projects.slides.develop.description'),
-      href: ''
-    },
-    {
-      title: t('projects.slides.patent1.title'),
-      description: t('projects.slides.patent1.description'),
-      href: 'https://fips.ru/publication-web/publications/document?type=doc&tab=PrEVM&id=F5C41A74-7E18-4773-B694-66DCF4F0CA0F'
-    },
-    {
-      title: t('projects.slides.portfolio.title'),
-      description: t('projects.slides.portfolio.description'),
-      href: 'https://krivolapovva.ru'
-    },
-    {
-      title: t('projects.slides.patent2.title'),
-      description: t('projects.slides.patent2.description'),
-      href: 'https://fips.ru/publication-web/publications/document?type=doc&tab=PrEVM&id=1198E223-A103-44C1-B210-F5892662482D'
-    },
-    {
-      title: t('projects.slides.codewars.title'),
-      description: t('projects.slides.codewars.description'),
-      href: 'https://www.codewars.com/users/nell-shark'
-    },
-    {
-      title: t('projects.slides.patent3.title'),
-      description: t('projects.slides.patent3.description'),
-      href: 'https://fips.ru/publication-web/publications/document?type=doc&tab=PrEVM&id=FCFF4268-E92B-4B60-958F-8449B37DFD5C'
-    }
-  ];
+  const slides = useMemo(
+    () => [
+      {
+        title: t('projects.slides.develop.title'),
+        description: t('projects.slides.develop.description'),
+        href: ''
+      },
+      {
+        title: t('projects.slides.patent1.title'),
+        description: t('projects.slides.patent1.description'),
+        href: 'https://fips.ru/publication-web/publications/document?type=doc&tab=PrEVM&id=F5C41A74-7E18-4773-B694-66DCF4F0CA0F'
+      },
+      {
+        title: t('projects.slides.portfolio.title'),
+        description: t('projects.slides.portfolio.description'),
+        href: 'https://krivolapovva.ru'
+      },
+      {
+        title: t('projects.slides.patent2.title'),
+        description: t('projects.slides.patent2.description'),
+        href: 'https://fips.ru/publication-web/publications/document?type=doc&tab=PrEVM&id=1198E223-A103-44C1-B210-F5892662482D'
+      },
+      {
+        title: t('projects.slides.codewars.title'),
+        description: t('projects.slides.codewars.description'),
+        href: 'https://www.codewars.com/users/nell-shark'
+      },
+      {
+        title: t('projects.slides.patent3.title'),
+        description: t('projects.slides.patent3.description'),
+        href: 'https://fips.ru/publication-web/publications/document?type=doc&tab=PrEVM&id=FCFF4268-E92B-4B60-958F-8449B37DFD5C'
+      }
+    ],
+    [t]
+  );
+
+  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
+  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
 
   return (
     <section className='embla'>
