@@ -16,8 +16,8 @@ import Junit from '@/assets/images/junit.svg';
 import Kafka from '@/assets/images/kafka.svg';
 import Kubernetes from '@/assets/images/kubernetes.svg';
 import Linux from '@/assets/images/linux.svg';
+import Lombok from '@/assets/images/lombok.svg';
 import Maven from '@/assets/images/maven.svg';
-import Mysql from '@/assets/images/mysql.svg';
 import Nginx from '@/assets/images/nginx.svg';
 import Nodejs from '@/assets/images/nodejs.svg';
 import Npm from '@/assets/images/npm.svg';
@@ -52,7 +52,7 @@ const skillItems = [
   { href: 'https://kubernetes.io/', text: 'Kubernetes', imageSrc: Kubernetes },
   { href: 'https://www.linux.org/', text: 'Linux', imageSrc: Linux },
   { href: 'https://maven.apache.org/', text: 'Maven', imageSrc: Maven },
-  { href: 'https://www.mysql.com/', text: 'MySQL', imageSrc: Mysql },
+  { href: 'https://projectlombok.org/', text: 'Lombok', imageSrc: Lombok },
   { href: 'https://nginx.org/', text: 'Nginx', imageSrc: Nginx },
   { href: 'https://nodejs.org/', text: 'Node.js', imageSrc: Nodejs },
   { href: 'https://www.npmjs.com/', text: 'npm', imageSrc: Npm },
