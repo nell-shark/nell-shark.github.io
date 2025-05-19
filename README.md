@@ -22,23 +22,22 @@
 
 ## 🌐 Visit the Site
 
-[![Website Preview](https://img.shields.io/badge/Visit-krivolapovva.ru-blue?style=for-the-badge&logo=google-chrome)](https://krivolapovva.ru/)
-
-## 🚀 Features
-
-- 🧑‍💻 **About Me** section
-- 📂 **Portfolio** showcasing my work
-- 📫 **Contact** information
+<div align="center">
+  <a href="https://krivolapovva.ru/">
+    <img src="./.github/site.gif" alt="Website Preview" width="80%">
+  </a>
+</div>
 
 ## 🛠 Tech Stack
 
 - **Frontend:** React + Vite
-- **UI Framework:** Tailwind CSS
+- **Styling:** Tailwind CSS
 - **Deployment:** GitHub Pages
+- **Additional Tools:** ESLint, Prettier, Husky, Motion
 
 ## 📦 Getting Started
 
-Clone the repo and run the development server:
+To run the project locally:
 
 ```bash
 git clone https://github.com/nell-shark/nell-shark.github.io
@@ -47,7 +46,15 @@ npm install
 npm run dev
 ```
 
+Then open your browser at http://localhost:5173
+
+## 💌 Contact
+
+- [**Email**](mailto:KrivolapovVladislav1998@gmail.com)
+- [**Telegram**](https://t.me/nellshark)
+- [**Github**](https://github.com/nell-shark)
+
 ## ⚖️ License
 
 This project is licensed under
-the [MIT License](https://github.com/nell-shark/nell-shark.github.io/blob/main/LICENSE).
+the [MIT License](https://github.com/nell-shark/nell-shark.github.io/blob/main/LICENSE)
