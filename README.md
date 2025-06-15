@@ -2,20 +2,20 @@
    <img src="./.github/logo.svg" alt="logo" width="35%">
    <h1>📘 Personal Site</h1>
    <p>
-      <a href="https://github.com/nell-shark/nell-shark.github.io/blob/master/LICENSE">
+      <a href="https://github.com/krivolapovdev/krivolapovdev.github.io/blob/master/LICENSE">
          <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License">
       </a>
-      <a href="https://github.com/nell-shark/nell-shark.github.io">
-         <img src="https://img.shields.io/github/repo-size/nell-shark/nell-shark.github.io.svg" alt="Repository Size">
+      <a href="https://github.com/krivolapovdev/krivolapovdev.github.io">
+         <img src="https://img.shields.io/github/repo-size/krivolapovdev/krivolapovdev.github.io.svg" alt="Repository Size">
       </a>
-      <a href="https://github.com/nell-shark/nell-shark.github.io/pulls">
-         <img src="https://img.shields.io/github/issues-pr-raw/nell-shark/nell-shark.github.io.svg" alt="Pull Requests">
+      <a href="https://github.com/krivolapovdev/krivolapovdev.github.io/pulls">
+         <img src="https://img.shields.io/github/issues-pr-raw/krivolapovdev/krivolapovdev.github.io.svg" alt="Pull Requests">
       </a>
-      <a href="https://github.com/nell-shark/nell-shark.github.io/issues">
-         <img src="https://img.shields.io/github/issues-raw/nell-shark/nell-shark.github.io.svg" alt="Open Issues">
+      <a href="https://github.com/krivolapovdev/krivolapovdev.github.io/issues">
+         <img src="https://img.shields.io/github/issues-raw/krivolapovdev/krivolapovdev.github.io.svg" alt="Open Issues">
       </a>
-      <a href="https://github.com/nell-shark/nell-shark.github.io/graphs/commit-activity">
-         <img src="https://img.shields.io/github/last-commit/nell-shark/nell-shark.github.io.svg" alt="Last Commit">
+      <a href="https://github.com/krivolapovdev/krivolapovdev.github.io/graphs/commit-activity">
+         <img src="https://img.shields.io/github/last-commit/krivolapovdev/krivolapovdev.github.io.svg" alt="Last Commit">
       </a>
    </p>
 </div>
@@ -40,8 +40,8 @@
 To run the project locally:
 
 ```bash
-git clone https://github.com/nell-shark/nell-shark.github.io
-cd nell-shark.github.io
+git clone https://github.com/krivolapovdev/krivolapovdev.github.io
+cd krivolapovdev.github.io
 npm install
 npm run dev
 ```
@@ -51,10 +51,10 @@ Then open your browser at http://localhost:5173
 ## 💌 Contact
 
 - [**Email**](mailto:KrivolapovVladislav1998@gmail.com)
-- [**Telegram**](https://t.me/nellshark)
-- [**Github**](https://github.com/nell-shark)
+- [**Telegram**](https://t.me/krivolapovdev)
+- [**Github**](https://github.com/krivolapovdev)
 
 ## ⚖️ License
 
 This project is licensed under
-the [MIT License](https://github.com/nell-shark/nell-shark.github.io/blob/main/LICENSE)
+the [MIT License](https://github.com/krivolapovdev/krivolapovdev.github.io/blob/main/LICENSE)

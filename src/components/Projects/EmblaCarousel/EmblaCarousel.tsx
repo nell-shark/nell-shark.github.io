@@ -38,7 +38,7 @@ export function EmblaCarousel() {
       {
         title: t('projects.slides.codewars.title'),
         description: t('projects.slides.codewars.description'),
-        href: 'https://www.codewars.com/users/nell-shark'
+        href: 'https://www.codewars.com/users/krivolapovdev'
       },
       {
         title: t('projects.slides.patent3.title'),
